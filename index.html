@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridIt | CSS Grid System Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <header class="main-header">
+        <h1 class="main-logo">Grid It!</h1>
+        <h3>CSS Grid System Generator</h3>
+    </header> -->
+    
+    <section class="main-grid-page">
+        <div class="grid-item" id="grid-control-slider">
+            <header class="main-header">
+                <h1 class="main-logo">Grid It!</h1>
+                <h3>CSS Grid System Generator</h3>
+            </header>
+            <div class="cols" id="cols">
+                <h2>
+                    Grid Columns 
+                </h2>
+                <div class="add-col-btn">
+                    <button id="add-col-btn">
+                        Add 
+                    </button>
+                </div>
+                <div class="added-cols" id="added-cols">
+                    <div class="col" id="col" data-index="0">
+                        <span>
+                            <input type="number" step="0.5" min="0.5" value="1" class="num-col-in" data-value="1">
+                        </span>
+                        <span>
+                            <select id="options-m" class="options-m-cols">
+                                <option value="fr">fr</option>
+                                <option value="px">px</option>
+                                <option value="%">%</option>
+                                <option value="auto">auto</option>
+                                <option value="em">em</option>
+                            </select>
+                        </span>
+                        <button class="del-col" data-index="0">Delete</button>
+                    </div>
+                    <div class="col" id="col" data-index="1">
+                        <span>
+                            <input type="number" step="0.5" value="1" min="0.5" class="num-col-in" data-value="1">
+                        </span>
+                        <span>
+                            <select id="options-m" class="options-m-cols">
+                                <option value="fr">fr</option>
+                                <option value="px">px</option>
+                                <option value="%">%</option>
+                                <option value="auto">auto</option>
+                                <option value="em">em</option>
+                              </select>
+                        </span>
+                        <button class="del-col" data-index="1">Delete</i></button>
+                    </div>
+                    <div class="col" id="col" data-index="2">
+                        <span>
+                            <input type="number" step="0.5" value="1" min="0.5" class="num-col-in" data-value="1">
+                        </span>
+                        <span>
+                            <select id="options-m" class="options-m-cols">
+                                <option value="fr">fr</option>
+                                <option value="px">px</option>
+                                <option value="%">%</option>
+                                <option value="auto">auto</option>
+                                <option value="em">em</option>
+                              </select>
+                        </span>
+                        <button class="del-col" data-index="2">Delete</i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Rows -->
+            <div class="rows" id="rows">
+                <h2>
+                    Grid Rows 
+                </h2>
+                <div class="add-row-btn">
+                    <button id="add-row-btn">
+                        Add 
+                    </button>
+                </div>
+                <div class="added-rows" id="added-rows">
+                    <div class="row" id="row" data-index="0">
+                        <span>
+                            <input type="number" step="0.5" min="0.5" value="1" class="num-row-in" data-value="1">
+                        </span>
+                        <span>
+                            <select id="options-m" class="options-m-rows">
+                                <option value="fr">fr</option>
+                                <option value="px">px</option>
+                                <option value="%">%</option>
+                                <option value="auto">auto</option>
+                                <option value="em">em</option>
+                            </select>
+                        </span>
+                        <button class="del-row" data-index="0">Delete</button>
+                    </div>
+                    <div class="row" id="row" data-index="1">
+                        <span>
+                            <input type="number" step="0.5" value="1" min="0.5" class="num-row-in" data-value="1">
+                        </span>
+                        <span>
+                            <select id="options-m" class="options-m-rows">
+                                <option value="fr">fr</option>
+                                <option value="px">px</option>
+                                <option value="%">%</option>
+                                <option value="auto">auto</option>
+                                <option value="em">em</option>
+                              </select>
+                        </span>
+                        <button class="del-row" data-index="1">Delete</i></button>
+                    </div>
+                    <div class="row" id="row" data-index="2">
+                        <span>
+                            <input type="number" step="0.5" value="1" min="0.5" class="num-row-in" data-value="1">
+                        </span>
+                        <span>
+                            <select id="options-m" class="options-m-rows">
+                                <option value="fr">fr</option>
+                                <option value="px">px</option>
+                                <option value="%">%</option>
+                                <option value="auto">auto</option>
+                                <option value="em">em</option>
+                              </select>
+                        </span>
+                        <button class="del-row" data-index="2">Delete</i></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Gap -->
+            <div class="grid-gap">
+                <h2>Grid Gap Column</h2>
+                <div class="grid-gap-col">
+                    <span id="grid-gap-col-me">
+                        <input type="number" step="5" value="10" id="col-gap" data-value="0">
+                    </span>
+                    <span id="grid-gap-col-select">
+                        <select id="options-m-c">
+                            <option value="px">px</option>
+                            <option value="%">%</option>
+                          </select>
+                    </span>
+                </div>
+                <h2>Grid Gap Row</h2>
+                <div>
+                    <span id="grid-gap-row-me">
+                        <input type="number" step="5" value="10" id="row-gap" data-value="0">
+                    </span>
+                    <span id="grid-gap-row-select">
+                        <select id="options-m-r">
+                            <option value="px">px</option>
+                            <option value="%">%</option>
+                          </select>
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="main-screen" id="main-screen" data-template="1fr 1fr 1fr" data-items="4">
+                <div class="mainscreen-item" data-index="0">
+                    1
+                </div>
+                <div class="mainscreen-item" data-index="1">
+                    2
+                </div>
+                <div class="mainscreen-item" data-index="2">
+                    3
+                </div>
+                <div class="mainscreen-item" data-index="3">
+                    4
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="items">
+                <h2>Grid Items</h2>
+                <div id="btns">
+                    <button id="add-item-btn">
+                        Add Grid Items
+                    </button>
+                    <button id="gener-code-btn">
+                        Generate code 
+                    </button>
+                </div>
+                <div id="added-items"><br/>
+                     **Please Fill In All The Inputs Fields.
+                    <ol>
+                        <li data-index="0">
+                            <div class="ol-col">
+                                <input type="number" min="1" placeholder="Column start" data-value="1"> /
+                                <input type="number" min="1" placeholder="Column End" data-value="2">
+                            </div>
+                            <div class="ol-row">
+                                <input type="number" min="1" placeholder="Row start" data-value="1"> /
+                                <input type="number" min="1" placeholder="Row End" data-value="2">
+                            </div>
+                            <button class="del-item-btn">Delete</button>
+                        </li>
+                        <li data-index="1">
+                            <div class="ol-col">
+                                <input type="number" min="1" placeholder="Column start" data-value="2"> /
+                                <input type="number" min="1" placeholder="Column End" data-value="3">
+                            </div>
+                            <div class="ol-row">
+                                <input type="number" min="1" placeholder="Row start" data-value="1"> /
+                                <input type="number" min="1" placeholder="Row End" data-value="2">
+                            </div>
+                            <button class="del-item-btn">Delete</button>
+                        </li>
+                        <li data-index="2">
+                            <div class="ol-col">
+                                <input type="number" min="1" placeholder="Column start" data-value="3"> /
+                                <input type="number" min="1" placeholder="Column End" data-value="4">
+                            </div>
+                            <div class="ol-row">
+                                <input type="number" min="1" placeholder="Row start" value='' data-value="1"> /
+                                <input type="number" min="1" placeholder="Row End" data-value="2">
+                            </div>
+                            <button class="del-item-btn">Delete</button>
+                        </li>
+                        <li data-index="3">
+                            <div class="ol-col">
+                                <input type="number" min="1" placeholder="Column start" data-value="1"> /
+                                <input type="number" min="1" placeholder="Column End" data-value="2">
+                            </div>
+                            <div class="ol-row">
+                                <input type="number" min="1" placeholder="Row start" data-value="2"> /
+                                <input type="number" min="1" placeholder="Row End" data-value="3">
+                            </div>
+                            <button class="del-item-btn">Delete</button>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            Made With Love By ..<br/><br/> <a href="https://github.com/ahmedm1999">Ahmed Mukahal</a><br/><a href="https://github.com/RaadHasan">Raad Hasan</a>
+        </div>
+        <div class="grid-item">
+            <footer class="phone-footer" id="phone-footer">
+                <div id="grid-control-slider-btn-1">
+                    <i class="fas fa-grip-horizontal" id="cols-rows" data-open="false"></i><br/>
+                    Cols & Rows
+                </div>
+                <div id="grid-control-slider-btn-2">
+                    <i class="fas fa-code-branch" id="pop-up-phone" data-open="false"></i><br/>
+                    Generate Code
+                </div>
+                <div id="grid-control-slider-btn-3">
+                    <i class="fas fa-sitemap" id="items-slider" data-open="false"></i><br/>
+                    Grid Items
+                </div>
+            </footer>
+        </div>
+    </section>
+    <section class="pop-up" id="pop-up">
+        <div class="pop-up-content">
+            <div class="pop-up-close" id="pop-up-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="css-code-container">
+                <div class="css-code-nav" id="code-nav">
+                    <h2>CSS</h2>
+                    <button id="copy-btn" onclick="copy_css()">Copy!</button>
+                </div>
+                <div class="css-code" id="css-code">
+<pre>
+<code>
+.grid-container {
+    display: grid;
+    grid-template-columns: <span id="col-temp-code">1fr 1fr 1fr</span>;
+    grid-template-rows: <span id="row-temp-code">1fr 1fr 1fr</span>;
+    <span id="col-gap-prob">grid-column-gap: </span><span id="col-gap-res">10px;</span>
+    <span id="row-gap-prob">grid-row-gap: </span> <span id="row-gap-res">10px</span>
+}
+</code>
+</pre>
+                        <pre id="css-pre">
+<code data-index="0">
+.grid-container > grid-item:nth-child(<span class="nth-child"></span>) {
+    grid-column: <span class="col-start-value"></span>/<span class="col-end-value"></span>;
+    grid-row: <span class="row-start-value"></span>/<span class="row-end-value"></span>;
+}
+</code>
+<code data-index="1">
+.grid-container > grid-item:nth-child(<span class="nth-child"></span>) {
+    grid-column: <span class="col-start-value"></span>/<span class="col-end-value"></span>;
+    grid-row: <span class="row-start-value"></span>/<span class="row-end-value"></span>;
+}
+</code>
+<code data-index="2">
+.grid-container > grid-item:nth-child(<span class="nth-child"></span>) {
+    grid-column: <span class="col-start-value"></span>/<span class="col-end-value"></span>;
+    grid-row: <span class="row-start-value"></span>/<span class="row-end-value"></span>;
+}
+</code>
+<code data-index="3">
+.grid-container > grid-item:nth-child(<span class="nth-child"></span>) {
+    grid-column: <span class="col-start-value"></span>/<span class="col-end-value"></span>;
+    grid-row: <span class="row-start-value"></span>/<span class="row-end-value"></span>;
+}
+</code>
+                        </pre>
+                </div>
+            </div>
+            <div class="html-code-container">
+                <div class="html-code-nav" id="code-nav">
+                    <h2>HTML</h2>
+                    <button id="copy-btn-html" onclick="copy_html()">Copy!</button>
+                </div>
+                <div class="html-code" id="html-code">
+                    <span>
+                        <pre>
+<code>
+<span style="color:#fff"><span style="color:#fff">&lt;</span>div class="grid-container"<span style="color:#fff"></span><span style="color:#fff">&gt;</span></span><br/><span id="append_items_html"><span data-index="0"><span style="color:#fff">    <span style="color:#fff">&lt;</span>div class="grid-item"<span style="color:#fff">&gt;</span></span><span style="color:#fff"><span style="color:#fff">&lt;</span>/div<span style="color:#fff">&gt;</span></span></span>
+    <span data-index="1"><span style="color:#fff"><span style="color:#fff">&lt;</span>div class="grid-item"<span style="color:#fff">&gt;</span></span><span style="color:#fff"><span style="color:#fff">&lt;</span>/div<span style="color:#fff">&gt;</span></span></span>
+    <span data-index="2"><span style="color:#fff"><span style="color:#fff">&lt;</span>div class="grid-item"<span style="color:#fff">&gt;</span></span><span style="color:#fff"><span style="color:#fff">&lt;</span>/div<span style="color:#fff">&gt;</span></span></span>
+    <span data-index="3"><span style="color:#fff"><span style="color:#fff">&lt;</span>div class="grid-item"<span style="color:#fff">&gt;</span></span><span style="color:#fff"><span style="color:#fff">&lt;</span>/div<span style="color:#fff">&gt;</span></span></span>
+</span><span style="color:#fff">&lt;</span>/div<span style="color:#fff">&gt;</span>
+</code>
+</pre>
+                    </span>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Scripts -->
+    
+    <script src="app_row.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
